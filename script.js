@@ -142,7 +142,7 @@ class TypeWriter {
 }
 
 // Initialize typing
-new TypeWriter(document.getElementById('nameTyping'), ['Okean'], 3000);
+new TypeWriter(document.getElementById('nameTyping'), ['Øᴋᴇᴀн'], 3000);
 
 const skillsWords = ['Learning Python...'];
 new TypeWriter(document.getElementById('skillsTyping'), skillsWords, 3000);
@@ -236,3 +236,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Initialize Language
 // ==========================================
 setLanguage(currentLang);
+
