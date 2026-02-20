@@ -1,70 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OKEAN | ENCRYPTED PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>OKEAN | ARCHIVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="loader" class="cyber-loader">
+    <div id="loader" class="simple-loader">
         <div class="loader-content">
-            <div class="glitch-text" data-text="SYSTEM_RECOVERY">SYSTEM_RECOVERY</div>
-            <div class="progress-container">
-                <div id="loaderBar" class="progress-bar-fill"></div>
-            </div>
-            <div class="loader-status">BOOTING OKEAN_OS... [ <span id="percent">0</span>% ]</div>
+            <h2 class="gothic-text">Okean</h2>
+            <div class="load-line"></div>
         </div>
     </div>
 
-    <canvas id="matrixCanvas"></canvas>
-
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#home" data-i18n="nav.home">TERMINAL</a>
-            <a href="#skills" data-i18n="nav.skills">MODULES</a>
-            <a href="#contact" data-i18n="nav.contact">ENCRYPTED_LINK</a>
+            <a href="#home" data-i18n="nav.home">HOME</a>
+            <a href="#skills" data-i18n="nav.skills">KNOWLEDGE</a>
+            <a href="#contact" data-i18n="nav.contact">MESSAGE</a>
         </div>
-        <div class="nav-controls">
-            <button id="langToggle" class="cyber-btn-sm">JA // EN</button>
-        </div>
+        <button id="langToggle" class="lang-btn">EN / JA</button>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="glitch-wrapper">
-                <h1 class="hero-title glitch" data-i18n="hero.title" data-text="OKEAN IS BACK">OKEAN IS BACK</h1>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="gothic-title" data-i18n="hero.title">Okean is Back</h1>
+                <p class="mono-subtitle" data-i18n="hero.subtitle">Silence is the loudest sound.</p>
+                <div class="hero-links">
+                    <a href="#skills" class="link-btn">EXPLORE</a>
+                </div>
             </div>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">RE-ESTABLISHING CONNECTION TO THE VOID</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-cyber">INITIALIZE_CONTACT</a>
-                <a href="#skills" class="btn btn-outline">LOAD_MODULES</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="skills-section">
-        <h2 class="section-title" data-i18n="skills.title">LOADED_MODULES</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-code">0x01</div>
-                <h3>PYTHON</h3>
-                <p>Advanced automation and bot development.</p>
-                <div class="status-bar"><div class="fill" style="width: 85%;"></div></div>
+        <section id="skills" class="skills-section">
+            <h2 class="gothic-header" data-i18n="skills.title">Technical Arts</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <span class="skill-name">Python Engine</span>
+                    <span class="skill-desc">Bot construction & logic.</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Cyber Security</span>
+                    <span class="skill-desc">Defensive structures & testing.</span>
+                </div>
             </div>
-            <div class="skill-card">
-                <div class="skill-code">0x02</div>
-                <h3>CYBER_SEC</h3>
-                <p>WAF testing and vulnerability research.</p>
-                <div class="status-bar"><div class="fill" style="width: 70%;"></div></div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>[ OKEAN // 2026 ] - ALL SYSTEMS OPERATIONAL</p>
+        <p class="gothic-text">MMXXVI</p>
     </footer>
 
     <script src="script.js"></script>
