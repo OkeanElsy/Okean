@@ -1,7 +1,7 @@
 :root {
     --bg-color: #000000;
-    --text-color: #e0e0e0; /* Biroz xira oq, ko'zga yumshoq */
-    --accent-color: #808080; /* Kulrang aksent */
+    --text-color: #e0e0e0;
+    --accent-color: #808080;
     --gothic-font: 'UnifrakturMaguntia', serif;
     --mono-font: 'JetBrains Mono', monospace;
 }
@@ -19,24 +19,41 @@ body {
     overflow-x: hidden;
 }
 
-/* Loading */
+/* ================= LOADER ================= */
 .simple-loader {
     position: fixed;
     inset: 0;
     background: #000;
     z-index: 1000;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: opacity 0.8s ease;
 }
 
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle loader */
+.circle-loader {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #222;
+    border-top: 2px solid var(--text-color);
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: spin 1s linear infinite;
+}
+
+/* Line loader */
 .load-line {
     width: 100px;
     height: 1px;
     background: var(--accent-color);
-    margin-top: 10px;
+    margin-top: 15px;
     position: relative;
     overflow: hidden;
 }
@@ -51,22 +68,36 @@ body {
     animation: loading 2s infinite;
 }
 
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
 @keyframes loading {
     100% { left: 100%; }
 }
 
-/* Typography */
-.gothic-text { font-family: var(--gothic-font); font-size: 1.5rem; }
-.gothic-title { 
-    font-family: var(--gothic-font); 
-    font-size: clamp(4rem, 10vw, 7rem); 
-    font-weight: normal;
-    letter-spacing: 4px;
+/* ================= TYPOGRAPHY ================= */
+.gothic-text {
+    font-family: var(--gothic-font);
+    font-size: 1.5rem;
 }
-.gothic-header { font-family: var(--gothic-font); font-size: 3rem; margin-bottom: 2rem; }
-.mono-subtitle { font-family: var(--mono-font); color: var(--accent-color); font-size: 0.9rem; letter-spacing: 5px; }
 
-/* Layout */
+.gothic-title {
+    font-family: var(--gothic-font);
+    font-size: clamp(4rem, 10vw, 7rem);
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1),
+                 0 0 30px rgba(255,255,255,0.05);
+}
+
+.mono-subtitle {
+    font-family: var(--mono-font);
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+}
+
+/* ================= NAVBAR ================= */
 .navbar {
     padding: 40px;
     display: flex;
@@ -82,8 +113,19 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links a:hover { color: var(--text-color); }
+.nav-links a:hover {
+    color: var(--text-color);
+}
 
+.lang-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
 .hero {
     height: 80vh;
     display: flex;
@@ -91,23 +133,6 @@ body {
     justify-content: center;
     text-align: center;
 }
-
-.skills-section {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 0 20px;
-}
-
-.skill-item {
-    border-bottom: 1px solid #1a1a1a;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.skill-name { font-family: var(--mono-font); font-weight: 500; }
-.skill-desc { font-family: var(--mono-font); font-size: 0.8rem; color: var(--accent-color); }
 
 .link-btn {
     display: inline-block;
@@ -126,4 +151,9 @@ body {
     color: var(--bg-color);
 }
 
-.footer { text-align: center; padding: 50px; opacity: 0.3; }
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    padding: 50px;
+    opacity: 0.3;
+}
