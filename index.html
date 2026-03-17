@@ -4,42 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OKEAN | ARCHIVE</title>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- LOADER -->
     <div id="loader" class="simple-loader">
         <div class="loader-content">
             <h2 class="gothic-text">Okean</h2>
+            <div class="circle-loader"></div>
             <div class="load-line"></div>
         </div>
     </div>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#home" data-i18n="nav.home">HOME</a>
-            <a href="#skills" data-i18n="nav.skills">KNOWLEDGE</a>
-            <a href="#contact" data-i18n="nav.contact">MESSAGE</a>
+            <a href="#home">HOME</a>
+            <a href="#skills">KNOWLEDGE</a>
+            <a href="#contact">MESSAGE</a>
         </div>
-        <button id="langToggle" class="lang-btn">EN / JA</button>
+        <button class="lang-btn">EN / JA</button>
     </nav>
 
+    <!-- MAIN -->
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="gothic-title" data-i18n="hero.title">Okean is Back</h1>
-                <p class="mono-subtitle" data-i18n="hero.subtitle">Silence is the loudest sound.</p>
+                <h1 class="gothic-title">Okean is Back</h1>
+                <p class="mono-subtitle">Silence is the loudest sound.</p>
+
                 <div class="hero-links">
                     <a href="#skills" class="link-btn">EXPLORE</a>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <p class="gothic-text">MMXXVI</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- SCRIPT -->
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+
+            setTimeout(() => {
+                loader.style.opacity = "0";
+
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 800);
+            }, 15000); // 15 sekund
+        });
+    </script>
+
 </body>
 </html>
